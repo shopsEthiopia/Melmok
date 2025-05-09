@@ -38,11 +38,12 @@ main {
 
 /* Products section styling */
 .product-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center; /* This centers items horizontally */
 }
+
 
 .product {
   background-color: #f9f9f9;
