@@ -10,11 +10,11 @@ body {
 
 /* Header styling */
 #header {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  font-size: 25px;
-  padding: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 10px;
+  font-size: 25px;
 }
 
 /* Links styling */
@@ -24,58 +24,85 @@ a {
   background-color: black;
   padding: 5px 10px;
   border-radius: 20px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }
 
-.shop {
-  right: 145px;
+#hlinks {
+  display: flex;
+  gap: 10px;
 }
 
-#hlinks{
-  margin-top: 56px;
-}
 main {
   flex: 1;
+  padding: 20px;
 }
 
+/* Products section styling */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.product {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product h3 {
+  margin: 10px 0 5px;
+}
+
+.product p {
+  color: #555;
+}
+
+.product a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Footer */
 footer {
   background-color: #333;
   color: white;
   padding: 10px;
-  position: relative;
-}
-b {
-  color: #5900e4;
-  display: block;
   text-align: center;
 }
+
+/* Mobile-Friendly Adjustments */
 @media (max-width: 768px) {
-  /* Stack header content vertically */
+  body {
+    font-size: 16px;
+  }
+
   #header {
-    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 20px;
-    position: relative;
   }
 
-  /* Adjust navigation links */
   #hlinks {
-    position: static;
-    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
   }
 
   a {
-    position: static;
-    margin: 5px;
     display: inline-block;
-  }
-
-  /* Reduce font size */
-  body {
-    font-size: 16px;
+    margin: 5px;
   }
 }
